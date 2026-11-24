@@ -1,0 +1,19 @@
+// Q104: Find the pivot integer x between 1 and n.
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    if (scanf("%d", &n) != 1) return 0;
+
+    long long total = (long long)n * (n + 1) / 2;
+    long long x = (long long)sqrt((double)total);
+
+    if (x * x == total) {
+        printf("%lld\n", x);
+    } else {
+        printf("-1\n");
+    }
+
+    return 0;
+}
